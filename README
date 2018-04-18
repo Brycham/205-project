@@ -1,0 +1,19 @@
+This is the readme of the 205-2018-project
+
+Developers :
+
+Thomas Lopes : thlopes@csumb.edu
+Luis Alva : lavla@csumb.edu
+Juan Trinidad Luis : jtrinidad-luis@csumb.edu
+
+Faces.png : This image is a pictures a some faces to test the main program (used in reco.py)
+
+hello.py : A file with hello in it
+
+hello.txt : A file with hello in it
+
+mustache.png : image that will be used as a filter on a face
+
+reco.py : Python file recognizing the faces in an image
+
+haarcascade_frontalface_default.xml : Xml module for face recognition (used in reco.py)
