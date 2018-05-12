@@ -160,8 +160,13 @@ class NewWindow(QWidget):
     
     def on_click4(self):
         global temp2
-        recognize.recognize(temp2)
-    
+        if(self.my_combo_box.currentText()=="Face"):
+            recognize.recognize(temp2)
+#        elif(self.my_combo_box.currentText()=="Mouth"):
+#            
+#        elif(self.my_combo_box.currentText()=="Eyes"):
+
+
     
     
     
@@ -215,7 +220,6 @@ class MainWindow(QWidget):
     #@pyqtSlot()
     def on_click(self):
         
-     
         self.new_win = NewWindow()
         self.new_win.show()
 
