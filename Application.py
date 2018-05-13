@@ -3,6 +3,7 @@
     Author: Luis Alva
     
     Description: This is the application window that will call other files in the same directory and put the images accordingly to where they need to be. 
+    Mainwindow is the window that is displayed first, then if you click on Face Recognize it will open NewWindow if you open Plaster the NewWindow1 will open.
     
     
     '''
@@ -14,6 +15,7 @@ import PastMust as reco
 import reco as recognize
 import detectNose as noses
 import detectEye as eyes
+import detectFace as faces
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import pyqtSlot, QUrl
@@ -162,6 +164,7 @@ class NewWindow(QWidget):
     def on_click4(self):
         global temp2
         if(self.my_combo_box.currentText()=="Face"):
+            # faces.facedtect(temp2)
             recognize.recognize(temp2)
         elif(self.my_combo_box.currentText()=="Eyes"):
             eyes.eyedetect(temp2)
