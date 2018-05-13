@@ -12,7 +12,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QVB
 from PyQt5.QtCore import pyqtSlot
 import PastMust as reco
 import reco as recognize
-
+import detectNose as noses
+import detectEye as eyes
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import pyqtSlot, QUrl
@@ -26,7 +27,7 @@ temp1 = ""
 
 temp2 = ""
 
-my_list = ["Face", "Mouth", "Eyes"]
+my_list = ["Face", "Eyes", "Nose"]
 
 class NewWindow1(QWidget):
     def __init__(self):
@@ -162,10 +163,10 @@ class NewWindow(QWidget):
         global temp2
         if(self.my_combo_box.currentText()=="Face"):
             recognize.recognize(temp2)
-#        elif(self.my_combo_box.currentText()=="Mouth"):
-#            
-#        elif(self.my_combo_box.currentText()=="Eyes"):
-
+        elif(self.my_combo_box.currentText()=="Eyes"):
+            eyes.eyedetect(temp2)
+        elif(self.my_combo_box.currentText()=="Nose"):
+            noses.nosedetect(temp2)
 
     
     

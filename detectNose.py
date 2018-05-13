@@ -21,7 +21,6 @@ def nosedetect(path):
         for (nx, ny, nw, nh) in nose:
             cv2.rectangle(img, (nx, ny), (nx + nw, ny + nh), (0, 0, 255), 2)
 
-    cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-    cv2.imshow('image',img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.imwrite('newimagesss.png', img)
+    im = Image.open('newimagesss.png')
+    im.show()

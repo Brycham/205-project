@@ -21,7 +21,12 @@ def eyedetect(path):
         for (ex,ey,ew,eh) in eye:
             cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,255),2)
 
-    cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-    cv2.imshow('image',img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+
+    cv2.imwrite('newimages.png', img)
+    im = Image.open('newimages.png')
+    im.show()
+
+#cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+# cv2.imshow('image',img)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
