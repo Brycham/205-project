@@ -13,6 +13,7 @@ def nosedetect(path):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     nose = nose_cascade.detectMultiScale(gray, 1.3, 5)
+    pprint(nose)
 
     for (x,y,w,h) in nose:
         cv2.rectangle(img, (x,y), (x+w,y+h), (255,0,0), 2)
