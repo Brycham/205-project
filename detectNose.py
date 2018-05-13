@@ -1,3 +1,10 @@
+# Juan Trinidad
+# CST 205
+# Due 5/14/2018
+# Description: Python file that takes a image and returns it back.
+# When it does return it back, it displays the image with a box of where the nose is located at.
+#The program also returns an array of where the nose is detected.
+
 import cv2
 import sys
 from pprint import pprint

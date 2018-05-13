@@ -1,3 +1,10 @@
+# Juan Trinidad
+# CST 205
+# Due 5/14/2018
+# Description: Python file that takes a image and returns it back.
+# When it does return it back, it displays the image with a box of where the eyes is located at.
+#The program also returns an array of where the eyes is detected.
+
 import numpy as np
 import cv2
 from pprint import pprint
